@@ -1,1 +1,1 @@
-[Config.org]
+[Emacs_Cofig][Config.org]
