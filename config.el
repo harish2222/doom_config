@@ -72,22 +72,22 @@
                                 (require 'lsp-pyright)
                                 (lsp))))  ; or lsp-deferred
 
-(defun efs/org-font-setup ()
-  ;; Replace list hyphen with dot
-  (font-lock-add-keywords 'org-mode
-                          '(("^ *\\([-]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-
-  ;; Set faces for heading levels
- (dolist (face '((org-level-1 . 1.2)
-                  (org-level-2 . 1.1)
-                  (org-level-3 . 1.05)
-                  (org-level-4 . 1.0)
-                  (org-level-5 . 1.1)
-                  (org-level-6 . 1.1)
-                  (org-level-7 . 1.1)
-                  (org-level-8 . 1.1)))))
-;; Set faces for heading levels
+;;(defun efs/org-font-setup ()
+  ;;;; Replace list hyphen with dot
+  ;;(font-lock-add-keywords 'org-mode
+                          ;;'(("^ *\\([-]\\) "
+                             ;;(0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+;;
+  ;;;; Set faces for heading levels
+ ;;(dolist (face '((org-level-1 . 1.2)
+                  ;;(org-level-2 . 1.1)
+                  ;;(org-level-3 . 1.05)
+                  ;;(org-level-4 . 1.0)
+                  ;;(org-level-5 . 1.1)
+                  ;;(org-level-6 . 1.1)
+                  ;;(org-level-7 . 1.1)
+                  ;;(org-level-8 . 1.1)))))
+;;;; Set faces for heading levels
 
 (use-package! org
   :pin org
@@ -105,15 +105,15 @@
           "~/Org/Agenda/Journal.org"
           "~/Org/Agenda/TimeTable.org")))
 
-(use-package org-bullets
+(use-package! org-bullets
   :hook (org-mode . org-bullets-mode)
   :custom
   (org-bullets-bullet-list '("" "◉" "" "" "●" "○" "")))
 
-(with-eval-after-load 'org
-  (org-babel-do-load-languages
-      'org-babel-load-languages
-      '((emacs-lisp . t)
-      (python . t)))
-
-  (push '("conf-unix" . conf-unix) org-src-lang-modes))
+;;(with-eval-after-load 'org
+  ;;(org-babel-do-load-languages
+      ;;'org-babel-load-languages
+      ;;'((emacs-lisp . t)
+      ;;(python . t)))
+;;
+  ;;(push '("conf-unix" . conf-unix) org-src-lang-modes))
