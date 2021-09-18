@@ -9,7 +9,7 @@
 #+Email: harishkalva4126@gmail.com
 #+NAME: Harish Kalva
 
-* Doom Emacs BolerPlate Config
+* Doom Emacs BoilerPlate Config
 #+begin_src emacs-lisp
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
